@@ -6,7 +6,7 @@
 
 <div id="todos">
   <% @todos.each do |todo| %>
-    <%= render todo %>
+    <%= render partial: "todo", locals: { todo: todo, show_high_priority_toggle: true } %>
     <p>
       <%= link_to "Show this todo", todo %>
     </p>

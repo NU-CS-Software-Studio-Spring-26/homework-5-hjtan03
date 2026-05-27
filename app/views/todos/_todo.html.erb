@@ -1,7 +1,21 @@
+<% show_high_priority_toggle = local_assigns.fetch(:show_high_priority_toggle, false) %>
+
 <div id="<%= dom_id todo %>">
   <p>
     <strong>Description:</strong>
     <%= todo.description %>
   </p>
 
+  <% if show_high_priority_toggle %>
+    <p>
+      <strong>High priority:</strong>
+      <%= todo.high_priority? ? "Yes" : "No" %>
+    </p>
+
+    <%= button_to(
+      todo.high_priority? ? "Remove high priority" : "Mark high priority",
+      toggle_high_priority_todo_path(todo),
+      method: :patch
+    ) %>
+  <% end %>
 </div>

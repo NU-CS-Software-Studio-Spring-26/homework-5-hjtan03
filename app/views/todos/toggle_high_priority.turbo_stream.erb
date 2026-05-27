@@ -1,0 +1,3 @@
+<%= turbo_stream.replace @todo do %>
+  <%= render partial: "todos/todo", locals: { todo: @todo, show_high_priority_toggle: true } %>
+<% end %>
