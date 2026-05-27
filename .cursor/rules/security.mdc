@@ -1,0 +1,13 @@
+---
+description: Security rules for Rails todo app
+alwaysApply: true
+---
+
+- Never write, log, or expose secrets, API keys, or credentials.
+- Never use eval on user input.
+- Never use html_safe or raw on untrusted input.
+- Always use parameterized queries instead of SQL string interpolation.
+- Do not disable CSRF protection.
+- Do not bypass strong parameters or mass assignment protections.
+- Do not disable Rails session security checks.
+- Validate and sanitize user input appropriately.

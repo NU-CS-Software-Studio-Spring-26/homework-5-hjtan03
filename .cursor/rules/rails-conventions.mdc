@@ -1,0 +1,14 @@
+---
+description: Rails 8 conventions for the sample todo app
+alwaysApply: true
+---
+
+- Prefer Turbo Streams and Hotwire patterns over custom JavaScript.
+- Keep migrations reversible.
+- Use strong parameters in controllers.
+- Use Rails generators instead of handwritten boilerplate where possible.
+- Keep business logic in models, not views.
+- Use partials for reusable view components.
+- Follow RESTful routing conventions.
+- Keep the schema scoped to this todo app only.
+- Write or update tests for behavior changes.
